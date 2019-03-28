@@ -36,6 +36,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id} -u -n)
 # The developments headers will conflict with the dkms packages.
 Conflicts:      %{module}-dkms
 
+BuildRequires: gcc
 BuildRequires: kernel-devel
 
 %if !%{defined kernels} && !%{defined build_src_rpm}
